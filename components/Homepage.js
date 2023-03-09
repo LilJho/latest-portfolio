@@ -1,13 +1,12 @@
 import React from "react";
+import NameHeader from "./NameHeader";
 
 function Homepage() {
   return (
     <main>
       <section className=" w-[500px] z-10  ">
         <div className="flex items-center gap-2">
-          <h2 className="text-[75px] relative font-extrabold  uppercase flex">
-            Hi_There!
-          </h2>
+          <NameHeader />
         </div>
 
         <p className="mt-4">

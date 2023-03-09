@@ -11,27 +11,29 @@ function Navbar({ setCurrentInfo }) {
   }
   return (
     <nav className="absolute z-20 flex justify-between w-screen p-10 mx-auto">
-      <Image
-        onClick={() => {
-          const index = 0;
-          currentInfoHandler(index);
-        }}
-        className="z-20 cursor-pointer"
-        src={"/MyLogo.png"}
-        width={100}
-        height={100}
-        alt={"logo"}
-      />
+      <motion.div whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.8 }}>
+        <Image
+          src={"/logo.svg"}
+          width={50}
+          height={50}
+          alt={"Logo"}
+          className="cursor-pointer"
+          onClick={() => {
+            const index = 0;
+            currentInfoHandler(index);
+          }}
+        />
+      </motion.div>
 
       <div className="flex items-start gap-20">
         <motion.div whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.8 }}>
-          <SiGmail />
+          <SiGmail className="cursor-pointer" />
         </motion.div>
         <motion.div whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.8 }}>
-          <BsGithub />
+          <BsGithub className="cursor-pointer" />
         </motion.div>
         <motion.div whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.8 }}>
-          <GrLinkedinOption />
+          <GrLinkedinOption className="cursor-pointer" />
         </motion.div>
       </div>
     </nav>

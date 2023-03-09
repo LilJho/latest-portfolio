@@ -6,6 +6,7 @@ function Border({ children }) {
     <div className="w-screen h-screen">
       <div className="absolute top-0 left-0 ">
         <Image
+          className="pointer-events-none select-none"
           src={"/background/TLBorder.svg"}
           width={500}
           height={500}
@@ -15,6 +16,7 @@ function Border({ children }) {
       {children}
       <div className="absolute bottom-0 right-0 ">
         <Image
+          className="pointer-events-none select-none"
           src={"/background/BRBorder.svg"}
           width={500}
           height={500}
