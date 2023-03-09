@@ -17,7 +17,7 @@ function FlippableCard({ showFront, children }) {
   }, [showFront]);
 
   return (
-    <div className="z-10  flipcard">
+    <div className="z-10 flipcard">
       <CSSTransition in={showFront} timeout={300} classNames="flip">
         <Card frontContent={frontContent} backContent={backContent} />
       </CSSTransition>

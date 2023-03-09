@@ -1,18 +1,20 @@
 import { SiGmail } from "react-icons/si";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { GrLinkedinOption } from "react-icons/gr";
+import { motion } from "framer-motion";
+
 import Image from "next/image";
 
-function Navbar({ setCurrentInfo, setShowFront }) {
+function Navbar({ setCurrentInfo }) {
   function currentInfoHandler(index) {
     setCurrentInfo(index);
   }
   return (
-    <nav className="absolute flex justify-between w-screen p-10 mx-auto">
+    <nav className="absolute z-20 flex justify-between w-screen p-10 mx-auto">
       <Image
         onClick={() => {
           const index = 0;
           currentInfoHandler(index);
-          setShowFront((v) => !v);
         }}
         className="z-20 cursor-pointer"
         src={"/MyLogo.png"}
@@ -21,19 +23,17 @@ function Navbar({ setCurrentInfo, setShowFront }) {
         alt={"logo"}
       />
 
-      <ul className="flex gap-20">
-        <li>
-          <button className="w-4 hover:w-8">
-            <SiGmail />
-          </button>
-        </li>
-        <li>
-          <BsGithub className="w-4 " />
-        </li>
-        <li>
-          <BsLinkedin className="w-4 " />
-        </li>
-      </ul>
+      <div className="flex items-start gap-20">
+        <motion.div whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.8 }}>
+          <SiGmail />
+        </motion.div>
+        <motion.div whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.8 }}>
+          <BsGithub />
+        </motion.div>
+        <motion.div whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.8 }}>
+          <GrLinkedinOption />
+        </motion.div>
+      </div>
     </nav>
   );
 }

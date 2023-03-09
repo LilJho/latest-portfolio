@@ -1,4 +1,4 @@
-function Toolkit({ setCurrentInfo, setShowFront }) {
+function Toolkit({ setCurrentInfo }) {
   function currentInfoHandler(index) {
     setCurrentInfo(index);
   }
@@ -10,7 +10,6 @@ function Toolkit({ setCurrentInfo, setShowFront }) {
           <li>
             <button
               onClick={() => {
-                setShowFront((v) => !v);
                 const index = 1;
                 currentInfoHandler(index);
               }}
@@ -21,7 +20,6 @@ function Toolkit({ setCurrentInfo, setShowFront }) {
           <li>
             <button
               onClick={() => {
-                setShowFront((v) => !v);
                 const index = 2;
                 currentInfoHandler(index);
               }}
@@ -32,7 +30,6 @@ function Toolkit({ setCurrentInfo, setShowFront }) {
           <li>
             <button
               onClick={() => {
-                setShowFront((v) => !v);
                 const index = 3;
                 currentInfoHandler(index);
               }}
@@ -43,7 +40,6 @@ function Toolkit({ setCurrentInfo, setShowFront }) {
           <li>
             <button
               onClick={() => {
-                setShowFront((v) => !v);
                 const index = 4;
                 currentInfoHandler(index);
               }}
