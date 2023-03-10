@@ -1,4 +1,5 @@
 import React from "react";
+import Hello from "./Hello";
 import NameHeader from "./NameHeader";
 
 function Homepage() {
@@ -6,7 +7,8 @@ function Homepage() {
     <main>
       <section className=" w-[500px] z-10  ">
         <div className="flex items-center gap-2">
-          <NameHeader />
+          {/* <NameHeader /> */}
+          <Hello />
         </div>
 
         <p className="mt-4">
